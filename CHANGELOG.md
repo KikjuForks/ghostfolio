@@ -16,11 +16,60 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Breaking Change**: The `sslmode=prefer` parameter in `DATABASE_URL` is no longer supported. Please update your environment variables (see `.env`) to use `sslmode=require` if _SSL_ is enabled or remove the `sslmode` parameter entirely if _SSL_ is not used.
 
-## Unreleased
+## 2.255.0 - 2026-03-20
+
+### Changed
+
+- Sorted the activity types alphabetically on the activities page (experimental)
+- Sorted the asset classes of the assistant alphabetically
+- Sorted the tags of the assistant alphabetically
+- Upgraded `angular` from version `21.1.1` to `21.2.7`
+- Upgraded `Nx` from version `22.5.3` to `22.6.4`
+- Upgraded `prettier` from version `3.8.1` to `3.8.2`
+- Upgraded `svgmap` from version `2.19.2` to `2.19.3`
+- Upgraded `yahoo-finance2` from version `3.13.2` to `3.14.0`
+
+### Fixed
+
+- Fixed the missing value column of the accounts table component on mobile
+
+## 2.254.0 - 2026-03-10
+
+### Added
+
+- Added loan as an asset sub class
+
+### Changed
+
+- Extended the asset profile details dialog in the admin control panel to support editing countries for all asset types
+- Extended the asset profile details dialog in the admin control panel to support editing sectors for all asset types
+- Migrated the data collection for the _Open Startup_ (`/open`) page to the queue design pattern
+- Improved the language localization for German (`de`)
+- Upgraded `lodash` from version `4.17.23` to `4.18.1`
+
+### Fixed
+
+- Improved the style of the activity type component
+
+## 2.253.0 - 2026-03-06
 
 ### Added
 
 - Added support for filtering by activity type on the activities page (experimental)
+- Extended the admin control panel by adding a copy-to-clipboard button for the application version
+
+### Changed
+
+- Extended the terms of service for the _Ghostfolio_ SaaS (cloud) to include _Paid Plans_ and _Refund Policy_
+- Upgraded `prisma` from version `6.19.0` to `6.19.3`
+
+### Fixed
+
+- Fixed the allocations by account chart on the allocations page in the _Presenter View_
+- Fixed the allocations by asset class chart on the allocations page in the _Presenter View_
+- Fixed the allocations by currency chart on the allocations page in the _Presenter View_
+- Fixed the allocations by ETF provider chart on the allocations page in the _Presenter View_
+- Fixed the allocations by platform chart on the allocations page in the _Presenter View_
 
 ## 2.252.0 - 2026-03-02
 
@@ -6015,10 +6064,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Removed the alias from the user interface as a preparation to remove it from the `User` database schema
 - Removed the activities import limit for users with a subscription
-
-### Todo
-
-- Rename the environment variable from `MAX_ORDERS_TO_IMPORT` to `MAX_ACTIVITIES_TO_IMPORT`
 
 ## 1.169.0 - 14.07.2022
 
